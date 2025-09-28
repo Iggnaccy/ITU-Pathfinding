@@ -13,13 +13,6 @@ public class UIControl : MonoBehaviour
 
     private void Start()
     {
-        widthInput.text = gridManager.GridWidth.ToString();
-        heightInput.text = gridManager.GridHeight.ToString();
-        obstacleWeight.text = gridManager.obstacleWeight.ToString();
-        traversableWeight.text = gridManager.traversableWeight.ToString();
-        coverWeight.text = gridManager.coverWeight.ToString();
-
-
         widthInput.onEndEdit.AddListener(OnWidthOrHeightChanged);
         heightInput.onEndEdit.AddListener(OnWidthOrHeightChanged);
         obstacleWeight.onEndEdit.AddListener(OnObstacleWeightChanged);

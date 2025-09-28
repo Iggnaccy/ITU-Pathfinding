@@ -190,7 +190,10 @@ public class GridVisualizer : MonoBehaviour
     public void BeginMovementToTile(int x, int y)
     {
         if (latestPath == null || latestPath.Length < 1)
+        {
+            Debug.Log("No valid path to move.");
             return;
+        }
         if(enemy.x == x && enemy.y == y)
         {
             if (latestPath.Length > player.attackRange)

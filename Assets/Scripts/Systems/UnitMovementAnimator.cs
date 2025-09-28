@@ -27,7 +27,7 @@ public class UnitMovementAnimator : MonoBehaviour
 
     public void AnimateObjectOnPath(GameObject obj, Tile[] path, float durationPerSegment, Action callback = null)
     {
-        if (path.Length < 2) return;
+        if (path.Length < 1) return;
         TileEvents.EnableClick = false;
         Sequence movementSequence = DOTween.Sequence();
         Vector3 directionToFirst = new Vector3(path[0].x * tileSize, 0, path[0].y * tileSize) - obj.transform.position;
